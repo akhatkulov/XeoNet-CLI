@@ -25,14 +25,14 @@ def main(status: Optional[str] = typer.Argument("home")):
         ),
       ]
       y = inquirer.prompt(lang)
-      if "Uzbek" in y["lang"]:
-        tm  = typer.prompt(f"{typer.style("Har necha sekundda sizning manzilingizni almashtiraylik")}")
+      if "UZBEK" in y["lang"]:
+        tm  = typer.prompt(f"{typer.style("How often do you want your address changed?",fg=typer.colors.YELLOW)}")
         main_changer(x=int(tm))
       if "RUSSIAN" in y["lang"]:
-        tm  = typer.prompt(f"{typer.style("Давайте менять ваш адрес каждые несколько секунд")}")
+        tm  = typer.prompt(f"{typer.style("Как часто вы хотите, чтобы ваш адрес менялся?")}")
         main_changer(x=int(tm))
       if "ENGLISH" in y["lang"]:
-        tm  = typer.prompt(f"{typer.style("Let's change your address every few seconds")}")
+        tm  = typer.prompt(f"{typer.style("How often do you want your address changed?")}")
         main_changer(x=int(tm))
 
 if __name__ == "__main__":
