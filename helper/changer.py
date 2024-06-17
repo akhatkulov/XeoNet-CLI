@@ -21,7 +21,7 @@ except subprocess.CalledProcessError:
 
 def ma_ip():
     try:
-        url='https://www.myexternalip.com/raw'
+        url='https://black.hacknow.uz/ip/'
         get_ip= requests.get(url,proxies=dict(http='socks5://127.0.0.1:9050',https='socks5://127.0.0.1:9050'))
         return get_ip.text
     except:
